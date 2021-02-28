@@ -1,0 +1,67 @@
+Jawaban Tugas Berlatih SQL
+
+Soal No.1
+CREATE DATABASE IF NOT EXITS myshop
+
+Soal No.2
+CREATE TABLE users(
+    id int AUTO_INCREMENT PRIMARY KEY,
+    name varchar(255),
+    email varchar(255),
+    password varchar(255)
+);
+
+
+CREATE TABLE items(
+    id int AUTO_INCREMENT PRIMARY KEY,
+    name varchar(255),
+    description varchar(255),
+    price int(11),
+    stock int(11),
+    category_id int(11),
+    CONSTRAINT FOREIGN KEY(category_id) REFERENCES categories(id)
+    ON DELETE RESTRICT ON UPDATE RESTRICT)
+    ENGINE=INNODB
+    
+CREATE TABLE categories(
+    id int AUTO_INCREMENT PRIMARY KEY,
+    name varchar(255)
+);
+
+Soal No.3
+Insert Into Table users
+
+INSERT INTO users values('','John Doe','john@doe.com','john123');
+INSERT INTO users values('','Jane Doe','jane@doe.com','jenita123');
+
+Insert Into Table categories
+
+INSERT INTO categories values('','gadget');
+INSERT INTO categories values('','cloth');
+INSERT INTO categories values('','men');
+INSERT INTO categories values('','women');
+INSERT INTO categories values('','branded');
+
+Insert Into Table items
+
+INSERT INTO users values('','Sumsang b50','hape keren dari merek samsung','4000000','100','1');
+INSERT INTO users values('','Uniklooh','baju keren dari brand ternama','50000','50','2');
+INSERT INTO users values('','IMHO Watch','jam tangan anak yang jujur banget','2000000','10','1'); 
+
+Soal No.4
+a. Mengambil data users
+SELECT name,email FROM `users`
+
+b. Mengambil data items
+   1. SELECT * FROM items WHERE price > 1000000
+   2. SELECT * FROM items WHERE name LIKE '%sang%'
+
+c. SELECT * FROM items INNER JOIN categories ON items.category_id=categories.id 
+
+Soal No.5
+Mengubah Data dari Database
+
+UPDATE items SET price='2500000' WHERE id='1';
+
+
+
