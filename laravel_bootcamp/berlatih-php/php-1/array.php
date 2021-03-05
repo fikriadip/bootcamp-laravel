@@ -21,7 +21,7 @@
         */
     $kids = ["Mike", "Dustin", "Will", "Lucas", "Max", "Eleven"]; // Lengkapi di sini
     $adults = ["Hopper", "Nancy", "Joyce", "Jonathan", "Murray"];
-    echo "<h3> Soal 2</h3>";
+    // echo "<h3> Soal 2</h3>";
     /* 
             SOAL NO 2
             Tunjukkan panjang Array di Soal No 1 dan tampilkan isi dari masing-masing Array.
@@ -40,6 +40,8 @@
 
 
     echo "</ol>";
+
+    echo "<h3> Soal 2</h3>";
 
     echo "Total Adults: ". $adult = count($adults) .""; // Berapa panjang array adults
     echo "<br>";
@@ -77,6 +79,8 @@
             Status: "Alive"
             
         */
+
+    echo "<h3> Soal 3</h3>";
 
     $arraymultidimensi = [
         [
